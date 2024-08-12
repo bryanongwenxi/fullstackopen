@@ -1,29 +1,26 @@
 
-function Header() {
+function Header({course}) {
   return (
-    <div
-      className="header"
-      course="Half Stack application development"
-    />
+    <h1>{course}</h1>
   );
 }
 
 function Content({ title, number }) {
   return (
-    <div
-      className="content"
-      exercise={title}
-      part={number}
-    />
+    <div>
+      {title} {number}
+    </div>
+      
   );
 }
 
 function Total({ num1, num2, num3 }) {
   return (
-    <div
-      className="total"
-      sum={num1 + num2 + num3}
-    />
+    <div>
+      Number of exercises {num1 + num2 + num3}
+    </div>
+      
+    
   );
 }
 
@@ -32,8 +29,7 @@ export default function App() {
 
   return (
     <section>
-      <h1>Test</h1>
-      <Header />
+      <Header course="Half Stack application development"/>
       <Content
         title={'Fundamentals of React'}
         number={10}
